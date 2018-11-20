@@ -1,0 +1,8 @@
+<div class="dots">
+  <div
+    *ngFor="let n of numbers; let i = index"
+    (click)="selectDot(i)"
+    class="dot"
+    [class.dot--active]="i === activeDotIndex">
+  </div>
+</div>

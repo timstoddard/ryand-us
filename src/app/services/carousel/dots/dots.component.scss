@@ -1,0 +1,36 @@
+$dotRadius: 5px;
+
+:host {
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+}
+
+.dots {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  display: flex;
+  padding: 4px;
+}
+
+.dot {
+  background: white;
+  border-radius: $dotRadius;
+  height: $dotRadius * 2;
+  margin: 0 4px;
+  opacity: 0.6;
+  transition: all 0.25s ease;
+  width: $dotRadius * 2;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  &--active {
+    opacity: 0.8;
+  }
+}
