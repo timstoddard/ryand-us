@@ -1,7 +1,9 @@
-<div class="carousel">
+<div
+  #carousel
+  class="carousel">
   <ul
-    class="carousel__items"
-    [@slide]="currentItemIndex">
+    #slideWrapper
+    class="carousel__items">
     <li
       *ngFor="let item of items"
       class="carousel__item">

@@ -1,18 +1,18 @@
 :host {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
 }
 
 .home {
   background: white;
   border-radius: 5px;
+  box-shadow: 0 10px 6px -6px rgb(37,37,37);
   font-size: 35px; // TODO scalable
   text-align: center;
-  width: 600px;
-  box-shadow: 0 10px 6px -6px rgb(37,37,37);
   transition: all ease-in-out 0.25s;
+  width: 600px;
 
   &:hover {
     box-shadow: 0 12px 10px -6px rgb(37,37,37);
@@ -33,8 +33,8 @@
   }
   
   &__link {
-    font-size: 30px;
     color: black;
+    font-size: 30px;
     text-decoration: none;
     text-transform: capitalize;
     transition: all ease-in-out 0.25s;
