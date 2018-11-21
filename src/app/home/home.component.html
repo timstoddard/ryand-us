@@ -1,5 +1,10 @@
 <div class="home">
   <h1 class="home__title">Ryan Driggett</h1>
+  <div
+    (click)="nextQuote()"
+    class="home__links">
+    "{{ quotes[quoteIndex] }}"
+  </div>
   <!-- <div class="home__links">
     <div
       *ngFor="let link of ['about', 'toby', 'services']"

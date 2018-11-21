@@ -12,4 +12,18 @@ export class AppComponent {
     { path: 'toby', text: 'toby' },
     { path: 'services', text: 'services' },
   ];
+  iconLinks = [
+    {
+      href: 'https://www.linkedin.com/in/ryandriggett',
+      icon: 'assets/icons/linkedin.svg'
+    },
+    {
+      href: 'https://www.facebook.com/rdrigg',
+      icon: 'assets/icons/facebook.svg'
+    },
+    {
+      href: 'https://www.instagram.com/rdriggett',
+      icon: 'assets/icons/instagram.svg'
+     }
+  ];
 }

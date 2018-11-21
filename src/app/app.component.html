@@ -19,17 +19,16 @@
   </div>
   <footer class="footer">
     <hr class="footer__divider">
-    <ul class="footer__icons">
-      <a href="https://www.linkedin.com/in/ryandriggett/" class="footer__icon">
-        <img src="assets/icons/linkedin.svg">
+    <div class="footer__icons">
+      <a
+        *ngFor="let iconLink of iconLinks"
+        [href]="iconLink.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__icon">
+        <img [src]="iconLink.icon">
       </a>
-      <a href="https://www.facebook.com/rdrigg" class="footer__icon">
-        <img src="assets/icons/facebook.svg">
-      </a>
-      <a href="https://www.instagram.com/rdriggett/?hl=en" class="footer__icon">
-        <img src="assets/icons/instagram.svg">
-      </a>
-    </ul>
+    </div>
     <p class="footer__copyright">RyanD, Inc. © 2018</p>
   </footer>
 </div>
