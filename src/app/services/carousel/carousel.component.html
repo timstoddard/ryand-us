@@ -1,5 +1,7 @@
 <div class="carousel">
-  <ul class="carousel__items">
+  <ul
+    class="carousel__items"
+    [@slide]="currentItemIndex">
     <li
       *ngFor="let item of items"
       class="carousel__item">
@@ -8,7 +10,7 @@
         [alt]="item.text"
         class="carousel__item__image">
       <div class="carousel__item__text">
-        {{ item.text }}
+        <span>{{ item.text }}</span>
       </div>
     </li>
   </ul>
