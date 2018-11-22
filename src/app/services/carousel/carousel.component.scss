@@ -72,7 +72,6 @@ $iconWidth: 30px;
     padding: 10px;
     position: absolute;
     top: 0;
-    transition: $standardTransition;
 
     &:hover {
       cursor: pointer;
@@ -96,6 +95,7 @@ $iconWidth: 30px;
     border-radius: $iconWidth / 2;
     fill: rgba(255,255,255,0.6);
     height: $iconWidth;
+    transition: $standardTransition;
     width: $iconWidth;
   }
 }
