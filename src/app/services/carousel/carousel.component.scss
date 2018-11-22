@@ -1,3 +1,5 @@
+@import '~src/scss/variables';
+
 $iconWidth: 30px;
 
 :host {
@@ -53,7 +55,7 @@ $iconWidth: 30px;
         color: white;
         font-size: 30px;
         padding: 3px 10px;
-        transition: all 0.25s ease;
+        transition: $standardTransition;
 
         &:hover {
           background: rgba(0,0,0,0.6);
@@ -70,7 +72,7 @@ $iconWidth: 30px;
     padding: 10px;
     position: absolute;
     top: 0;
-    transition: all 0.25s ease;
+    transition: $standardTransition;
 
     &:hover {
       cursor: pointer;

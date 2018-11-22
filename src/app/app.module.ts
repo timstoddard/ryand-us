@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { routes } from './app.routes';
 import { CarouselComponent } from './services/carousel/carousel.component';
 import { DotsComponent } from './services/carousel/dots/dots.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DotsComponent } from './services/carousel/dots/dots.component';
     ServicesComponent,
     HomeComponent,
     CarouselComponent,
-    DotsComponent
+    DotsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

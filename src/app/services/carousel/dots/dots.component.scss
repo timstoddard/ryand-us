@@ -1,3 +1,5 @@
+@import '~src/scss/variables';
+
 $dotRadius: 5px;
 
 :host {
@@ -22,7 +24,7 @@ $dotRadius: 5px;
   height: $dotRadius * 2;
   margin: 0 4px;
   opacity: 0.6;
-  transition: all 0.25s ease;
+  transition: $standardTransition;
   width: $dotRadius * 2;
 
   &:hover {

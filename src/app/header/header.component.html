@@ -1,0 +1,37 @@
+<header class="header">
+  <ul class="header__links">
+    <li
+      *ngFor="let link of links"
+      class="header__linkWrapper">
+      <a
+        [routerLink]="link.path"
+        routerLinkActive="header__link--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="header__link">
+        {{ link.text }}
+      </a>
+    </li>
+  </ul>
+  <button
+    (click)="toggleMenu()"
+    class="header__menuTrigger">
+    {{ isMenuOpen ? 'close' : 'open' }}
+  </button>
+  <div
+    [@slide]="isMenuOpen ? 'open' : 'closed'"
+    class="header__menu">
+    <ul class="header__menu__links">
+        <li
+          *ngFor="let link of links"
+          class="header__menu__linkWrapper">
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="header__menu__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="header__menu__link">
+            {{ link.text }}
+          </a>
+        </li>
+      </ul>
+  </div>
+</header>

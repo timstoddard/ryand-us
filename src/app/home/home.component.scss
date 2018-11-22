@@ -1,3 +1,5 @@
+@import '~src/scss/variables';
+
 :host {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   box-shadow: 0 10px 6px -6px rgb(37,37,37);
   font-size: 35px; // TODO scalable
   text-align: center;
-  transition: all ease-in-out 0.25s;
+  transition: $standardTransition;
   width: 600px;
 
   &:hover {
@@ -37,7 +39,7 @@
     font-size: 30px;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all ease-in-out 0.25s;
+    transition: $standardTransition;
 
     &:hover {
       color: rgb(0,204,255);

@@ -1,19 +1,5 @@
 <div class="app">
-  <header class="header">
-    <ul class="header__links">
-      <li
-        *ngFor="let link of links"
-        class="header__linkWrapper">
-        <a
-          [routerLink]="link.path"
-          routerLinkActive="header__link--active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="header__link">
-          {{ link.text }}
-        </a>
-      </li>
-    </ul>
-  </header>
+  <app-header></app-header>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
