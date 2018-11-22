@@ -6,11 +6,19 @@
 
 .content {
   height: calc(100vh - #{$headerHeight} - #{$footerHeight});
-  overflow: auto;
-  padding: 30px 100px;
+  position: relative;
+
+  /deep/ router-outlet ~ * {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 30px 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
   @media screen and (max-width: 600px) {
     padding: 0 20px;
   }
 }
-

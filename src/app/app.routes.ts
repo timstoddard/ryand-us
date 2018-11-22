@@ -9,17 +9,21 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    data: { animationState: 'home' }
   },
   {
     path: 'about',
     component: AboutComponent,
+    data: { animationState: 'about' }
   },
   {
     path: 'toby',
     component: TobyComponent,
+    data: { animationState: 'toby' }
   },
   {
     path: 'services',
     component: ServicesComponent,
+    data: { animationState: 'services' }
   },
 ];

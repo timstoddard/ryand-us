@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { fromEvent, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+
+import { standardTransitionTime } from '../constants';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ import { takeUntil } from 'rxjs/operators';
   animations: [
     trigger('slide', [
       state('open', style({
-        left: '0',
+        left: 0,
         opacity: 1
       })),
       state('closed', style({
@@ -18,10 +20,10 @@ import { takeUntil } from 'rxjs/operators';
         opacity: 0
       })),
       transition('open => closed', [
-        animate('0.25s')
+        animate(standardTransitionTime)
       ]),
       transition('closed => open', [
-        animate('0.25s')
+        animate(standardTransitionTime)
       ]),
     ]),
   ],
