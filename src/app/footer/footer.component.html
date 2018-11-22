@@ -1,0 +1,14 @@
+<footer class="footer">
+  <hr class="footer__divider">
+  <div class="footer__icons">
+    <a
+      *ngFor="let iconLink of iconLinks"
+      [href]="iconLink.href"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="footer__icon">
+      <img [src]="iconLink.icon">
+    </a>
+  </div>
+  <p class="footer__copyright">RyanD, Inc. © 2018</p>
+</footer>

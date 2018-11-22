@@ -1,0 +1,29 @@
+@import '~src/scss/variables';
+
+.footer {
+  height: $footerHeight;
+  text-align: center;
+  width: 100%;
+
+  &__divider {
+    border-color: black;
+    margin: 0 5%;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto 0;
+    width: 160px;
+  }
+
+  &__icon {
+    color: white;
+    text-decoration: none;
+    transition: $standardTransition;
+  }
+
+  &__copyright {
+    margin: 10px 0;
+  }
+}
