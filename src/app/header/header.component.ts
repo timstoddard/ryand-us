@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { fromEvent, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -16,15 +18,15 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         opacity: 0
       })),
       transition('open => closed', [
-        animate('0.4s')
+        animate('0.25s')
       ]),
       transition('closed => open', [
-        animate('0.4s')
+        animate('0.25s')
       ]),
     ]),
   ],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   links = [
     { path: '', text: 'home' },
@@ -33,7 +35,23 @@ export class HeaderComponent {
     { path: 'services', text: 'services' },
   ];
 
+  private ngUnsubscribe = new Subject<void>();
+
+  ngOnInit() {
+    fromEvent(window, 'keyup')
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          this.hideMenu();
+        }
+      });
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  hideMenu() {
+    this.isMenuOpen = false;
   }
 }

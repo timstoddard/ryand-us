@@ -1,6 +1,7 @@
 @import '~src/scss/variables';
 
 $menuBreakpoint: 800px;
+$menuWidth: 200px;
 
 .header {
   align-items: center;
@@ -48,12 +49,13 @@ $menuBreakpoint: 800px;
 
   &__menu {
     background: rgb(240,240,240);
-    box-shadow: 10px 0 20px 0 rgba(0,0,0,0.3);
+    box-shadow: 10px 0 20px 0 rgba(0,0,0,0.4);
     height: calc(100% - #{$headerHeight});
     left: 0;
-    padding: 20px;
+    padding: 20px 0;
     position: absolute;
     top: $headerHeight;
+    width: $menuWidth;
     z-index: 1;
 
     &__links {
@@ -85,9 +87,27 @@ $menuBreakpoint: 800px;
     }
   }
 
+  &__menuShield {
+    background: transparent;
+    height: calc(100% - #{$headerHeight});
+    left: 100%;
+    position: absolute;
+    top: $headerHeight;
+    transition: $standardTransition;
+    width: 0;
+    z-index: 1;
+    
+    &--active {
+      background: rgba(0,0,0,0.2);
+      left: $menuWidth;
+      width: calc(100% - #{$menuWidth});
+    }
+  }
+
   @media screen and (min-width: $menuBreakpoint) {
     &__menuTrigger,
-    &__menu {
+    &__menu,
+    &__menuShield {
       display: none;
     }
   }

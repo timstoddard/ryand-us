@@ -6,4 +6,5 @@ $headerHeight: 50px;
 $footerHeight: 100px;
 
 // transitions
-$standardTransition: all 0.25s ease;
+$standardTransitionTime: 0.25s;
+$standardTransition: all $standardTransitionTime ease;

@@ -4,6 +4,7 @@
       *ngFor="let link of links"
       class="header__linkWrapper">
       <a
+        (click)="hideMenu()"
         [routerLink]="link.path"
         routerLinkActive="header__link--active"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -25,6 +26,7 @@
           *ngFor="let link of links"
           class="header__menu__linkWrapper">
           <a
+            (click)="hideMenu()"
             [routerLink]="link.path"
             routerLinkActive="header__menu__link--active"
             [routerLinkActiveOptions]="{ exact: true }"
@@ -33,5 +35,10 @@
           </a>
         </li>
       </ul>
+  </div>
+  <div
+    (click)="hideMenu()"
+    class="header__menuShield"
+    [class.header__menuShield--active]="isMenuOpen">
   </div>
 </header>
