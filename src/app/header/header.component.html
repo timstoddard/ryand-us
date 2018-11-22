@@ -12,11 +12,11 @@
       </a>
     </li>
   </ul>
-  <button
+  <app-menu-trigger
     (click)="toggleMenu()"
+    [isMenuOpen]="isMenuOpen"
     class="header__menuTrigger">
-    {{ isMenuOpen ? 'close' : 'open' }}
-  </button>
+  </app-menu-trigger>
   <div
     [@slide]="isMenuOpen ? 'open' : 'closed'"
     class="header__menu">
