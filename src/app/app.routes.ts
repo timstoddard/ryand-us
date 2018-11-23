@@ -26,4 +26,8 @@ export const routes: Routes = [
     component: ServicesComponent,
     data: { animationState: 'services' }
   },
+  {
+    path: '**',
+    redirectTo: '',
+  }
 ];
