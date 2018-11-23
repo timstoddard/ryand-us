@@ -27,21 +27,6 @@ import { standardTransitionTime } from './constants';
   ],
 })
 export class AppComponent {
-  iconLinks = [
-    {
-      href: 'https://www.linkedin.com/in/ryandriggett',
-      icon: 'assets/icons/linkedin.svg'
-    },
-    {
-      href: 'https://www.facebook.com/rdrigg',
-      icon: 'assets/icons/facebook.svg'
-    },
-    {
-      href: 'https://www.instagram.com/rdriggett',
-      icon: 'assets/icons/instagram.svg'
-     }
-  ];
-
   getAnimationState(o: RouterOutlet) {
     return o.isActivated
       ? o.activatedRouteData.animationState
