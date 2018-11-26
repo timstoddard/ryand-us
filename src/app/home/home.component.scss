@@ -2,18 +2,18 @@
 @import '~src/scss/variables';
 
 :host {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
   justify-content: center;
 }
 
 .home {
+  @include roboto;
   background: white;
   border-radius: 5px;
   box-shadow: 0 10px 6px -6px rgb(37,37,37);
-  font-size: 35px; // TODO scalable
-  padding: 0 40px;
+  padding: 20px 40px;
   text-align: center;
   transition: $standardTransition;
   user-select: none;
@@ -24,22 +24,22 @@
   }
 
   &__title {
-    @include roboto;
+    font-size: 45px; // TODO scalable
   }
 
   &__links {
     display: flex;
+    font-size: 30px;
     justify-content: space-around;
-    margin-bottom: 2em;
-    padding: 0 100px;
+    margin-bottom: 1em;
+    padding: 0 40px;
   }
 
   &__linkWrapper {
   }
-  
+
   &__link {
     color: black;
-    font-size: 30px;
     text-decoration: none;
     text-transform: capitalize;
     transition: $standardTransition;
