@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
     'Hey, at least I don\'t do xans!',
     'I like damaged Jewish girls don\'t @ me',
     'He drives an ST? What a pleb smh',
-    'I\'m not a virgin, I\'m an experienced asexual'
+    'I\'m not a virgin, I\'m an experienced asexual',
+    'My ass is virgin!',
+    'Stanley if you eat my dog, you\'re getting a viking funeral in your Honda'
   ];
   quoteIndex = 0;
 
