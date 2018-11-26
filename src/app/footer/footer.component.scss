@@ -1,6 +1,8 @@
+@import '~src/scss/mixins';
 @import '~src/scss/variables';
 
 .footer {
+  @include roboto;
   height: $footerHeight;
   text-align: center;
   width: 100%;
@@ -21,6 +23,14 @@
     color: white;
     text-decoration: none;
     transition: $standardTransition;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.25;
+    }
   }
 
   &__copyright {

@@ -1,3 +1,4 @@
+@import '~src/scss/mixins';
 @import '~src/scss/variables';
 
 :host {
@@ -23,7 +24,7 @@
   }
 
   &__title {
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
   }
 
   &__links {
